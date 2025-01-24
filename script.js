@@ -53,3 +53,42 @@ function afficherTriangleGauche(n) {
 } 
 }
   afficherTriangleGauche(5)
+
+// 1.5 Assemblage et décorations
+// Dernière étape, nous allons combiner le travail effectué sur afficherTriangleGauche() & afficherTriangleDroite() pour réaliser une nouvelle fonction afficherPointeSapin(), en ajoutant le tronc | et l’étoile + au milieu !
+
+function afficherPointeSapin(n) {
+    // Première ligne avec l'étoile
+    let espaceMilieu = '';
+    for (let i = 0; i < n; i++) {
+        espaceMilieu += ' ';
+    }
+    console.log(espaceMilieu + '+');
+
+    // Triangle gauche et droit avec tronc au centre
+    for (let index = 1; index <= n; index++) {
+        let ligne = '';
+
+        // Ajouter des espaces à gauche du triangle gauche
+        for (let espace = 1; espace <= n - index; espace++) {
+            ligne += ' ';
+        }
+
+        // Ajouter les étoiles du triangle gauche
+        for (let etoile = 1; etoile <= index; etoile++) {
+            ligne += '*';
+        }
+
+        // Ajouter le tronc
+        ligne += ' | ';
+
+        // Ajouter les étoiles du triangle droit
+        for (let etoile = 1; etoile <= index; etoile++) {
+            ligne += '*';
+        }
+
+        // Afficher la ligne complète
+        console.log(ligne);
+    }
+}
+afficherPointeSapin(3)
