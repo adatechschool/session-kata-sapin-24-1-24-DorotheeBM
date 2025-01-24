@@ -92,3 +92,12 @@ function afficherPointeSapin(n) {
     }
 }
 afficherPointeSapin(3)
+
+// Etape 2.2 : Début d'éffichage d'un sapin à étages
+function afficherSapin() {
+    afficherPointeSapin(1)
+    afficherPointeSapin(2)
+    afficherPointeSapin(3)
+  }
+  
+  afficherSapin(3, 3)
