@@ -93,11 +93,44 @@ function afficherPointeSapin(n) {
 }
 afficherPointeSapin(3)
 
-// Etape 2.2 : Début d'éffichage d'un sapin à étages
-function afficherSapin() {
-    afficherPointeSapin(1)
-    afficherPointeSapin(2)
-    afficherPointeSapin(3)
-  }
+// Etape 2.1 : Début d'éffichage d'un sapin à étages
+// function afficherSapin() {
+//     afficherPointeSapin(1)
+//     afficherPointeSapin(2)
+//     afficherPointeSapin(3)
+//   }
   
-  afficherSapin(3, 3)
+//   afficherSapin(3, 3)
+
+// fonction qui pour l'instant ne donne qu'un sapin aux étages identiques
+function afficherEtage(n) {
+   // Triangle gauche et droit avec tronc au centre
+   for (let index = 1; index <= n; index++) {
+    let ligne = '';
+
+    // Ajouter des espaces à gauche du triangle gauche
+    for (let espace = 1; espace <= n - index; espace++) {
+        ligne += ' ';
+    }
+
+    // Ajouter les étoiles du triangle gauche
+    for (let etoile = 1; etoile <= index; etoile++) {
+        ligne += '*';
+    }
+
+    // Ajouter le tronc
+    ligne += ' | ';
+
+    // Ajouter les étoiles du triangle droit
+    for (let etoile = 1; etoile <= index; etoile++) {
+        ligne += '*';
+    }
+
+    // Afficher la ligne complète
+    console.log(ligne);
+}
+ }
+ 
+ afficherEtage(3, 0) // les 3 premières lignes
+ afficherEtage(3, 1) // affiche à partir de la deuxième ligne, et continue sur 3 lignes
+ afficherEtage(3, 2) // affiche à partie de la troisième lige, et continue sur 3 lignes
