@@ -12,3 +12,13 @@ function afficherEtoiles(n) { // fonction pour afficher les étoiles
 
 afficherEtoiles(2)
 afficherEtoiles(5)
+
+// 1.2 Carré d’étoiles
+// Nous allons maintenant définir une nouvelle fonction afficherRectangle(hauteur, largeur)
+
+function afficherRectangle(hauteur, largeur) {
+    for (let index = 0; index < hauteur; index++){// pour chaque "étage" de la hauteur
+        afficherEtoiles(largeur)// appeler afficherEtoiles
+  }
+}
+  afficherRectangle(5, 5)
