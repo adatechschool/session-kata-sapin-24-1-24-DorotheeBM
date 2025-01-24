@@ -34,3 +34,22 @@ function afficherTriangleDroite(n) {
   }
 }
   afficherTriangleDroite(5)
+
+// 1.4 Seconde moitié et espaces
+// Nous pouvons maintenant faire la seconde moitié de la pointe du sapin en faisant le symétrique !
+
+function afficherTriangleGauche(n) {
+    for (let index = 1; index <= n; index++) {
+        let ligne = ''
+        // Ajouter des espaces
+        for (let espace = 1; espace <= n - index; espace++) {
+            ligne += ' '
+        }
+        // Ajouter les étoiles
+       for (let etoile = 1; etoile <= index; etoile++) {
+        ligne += '*';
+    }
+        console.log(ligne)
+} 
+}
+  afficherTriangleGauche(5)
