@@ -22,3 +22,15 @@ function afficherRectangle(hauteur, largeur) {
   }
 }
   afficherRectangle(5, 5)
+
+//   1.3 Triangle d’étoiles
+//   Il semblerait donc que nous pouvons nous inspirer du comportement de notre précédente fonction pour en définir une nouvelle afficherTriangleDroite(n)
+  
+//   ℹ️ ’Droite’ parce que ce triangle servira à la partie droite du sapin
+
+function afficherTriangleDroite(n) {
+    for (let index = 1; index <= n; index++){// En s'inspirant de la fonction afficherRectangle(),
+        afficherEtoiles(index)// comment afficher des lignes qui "s'allongent" un peu plus à chaque itération ?
+  }
+}
+  afficherTriangleDroite(5)
